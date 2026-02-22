@@ -161,7 +161,7 @@ export function TodoTable() {
             ) : (
               todos.map((todo) => (
                 <TableRow key={todo.id}>
-                  <TableCell className="font-medium px-2 py-1 align-top overflow-hidden break-words">
+                  <TableCell className="font-medium px-2 py-1 align-middle overflow-hidden break-words">
                     <textarea
                       value={todo.text}
                       onChange={(e) => updateText(todo.id, e.target.value)}
@@ -171,7 +171,7 @@ export function TodoTable() {
                     />
                   </TableCell>
                   {DAYS.map((day) => (
-                    <TableCell key={day} className="text-center px-1 py-1">
+                    <TableCell key={day} className="text-center align-middle px-1 py-1">
                       <div className="flex justify-center">
                         <Checkbox
                           checked={todo.days[day]}
@@ -181,7 +181,7 @@ export function TodoTable() {
                       </div>
                     </TableCell>
                   ))}
-                  <TableCell className="px-1 py-1">
+                  <TableCell className="align-middle px-1 py-1">
                     <Button
                       variant="ghost"
                       size="icon"
